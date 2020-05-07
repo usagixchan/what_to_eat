@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>一周午餐安排</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/angular.js/1.7.0/angular.js"></script>
+    <link rel="stylesheet" href="lunch.css">
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+    <div class="menu">
+        <span class="submit">添加：<input type="text" ng-model="sta">
+            <button ng-click="add(sta, stapleFood)">提交</button>
+        </span>
+        <p>主食类——</p>
+        <p ng-repeat="x in stapleFood">{{x}} <a href="" class="del" ng-click="delete(x, stapleFood)">X</a></p>
+    </div>
+    <div class="menu">
+        <span class="submit">添加：<input type="text" ng-model="veg">
+            <button ng-click="add(veg, vegetable)">提交</button>
+        </span>
+        <p>蔬菜类——</p>
+        <p ng-repeat="x in vegetable">{{x}} <a href="" class="del" ng-click="delete(x, vegetable)">X</a></p>
+    </div>
+    <div class="menu">
+        <span class="submit">添加：<input type="text" ng-model="pro">
+            <button ng-click="add(pro, protein)">提交</button>
+        </span>
+        <p>蛋白质类——</p>
+        <p ng-repeat="x in protein">{{x}} <a href="" class="del" ng-click="delete(x, protein)">X</a></p>
+    </div>
+    <div id="lunch">
+        <button ng-click="arrange()">点我安排一周午餐</button>
+        <button ng-click="reset()">重置</button>
+        <table>
+            <tr ng-hide="myHide">
+                <td>主食</td>
+                <td>蔬菜</td>
+                <td>蛋白质</td>
+            </tr>
+            <tr ng-repeat="x in lists">
+                <td>{{x.sta}}</td>
+                <td>{{x.veg}}</td>
+                <td>{{x.pro}}</td>
+            </tr>
+        </table>
+    </div>
+    <script src="lunch.js"></script>
+</body>
+
+</html>

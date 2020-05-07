@@ -1,0 +1,45 @@
+.menu {
+    border: 1px solid gray;
+    width: fit-content;
+    float: left;
+    margin-right: 20px;
+    height: fit-content;
+}
+
+.submit {
+    position: relative;
+    margin-bottom: 0px;
+}
+
+#lunch button {
+    background-color: #b5deec;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+#lunch {
+    margin-left: 100px;
+}
+
+table {
+    text-align: center;
+    margin-top: 10px;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    padding: 5px;
+    width: 100px;
+}
+
+.del {
+    float: right;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #f57474;
+}
